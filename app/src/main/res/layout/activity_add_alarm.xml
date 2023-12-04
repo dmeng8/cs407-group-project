@@ -97,18 +97,18 @@
 
         </LinearLayout>
 
-        <Button
+        <CheckBox
             android:id="@+id/addChallenge"
             android:layout_width="256dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Add a Challenge" />
+            android:text="Add Challenge" />
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainerView"
             android:name="com.cs407.cs407groupproject.AddChallengeFragment"
             android:layout_width="match_parent"
             android:layout_height="128dp"
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/addChallenge"

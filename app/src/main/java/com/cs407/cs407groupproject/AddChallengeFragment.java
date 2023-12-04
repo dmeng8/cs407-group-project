@@ -1,12 +1,17 @@
 package com.cs407.cs407groupproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,5 +65,50 @@ public class AddChallengeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_add_challenge, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        Button button1 = view.findViewById(R.id.button1);
+        Button button2 = view.findViewById(R.id.button2);
+        Button button3 = view.findViewById(R.id.button3);
+        Button button4 = view.findViewById(R.id.button4);
+
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                button1.setText("SELECTED");
+                button2.setText("Challenge 2");
+                button3.setText("Challenge 3");
+                button4.setText("Challenge 4");
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                button1.setText("Challenge 1");
+                button2.setText("SELECTED");
+                button3.setText("Challenge 3");
+                button4.setText("Challenge 4");
+            }
+        });
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                button1.setText("Challenge 1");
+                button2.setText("Challenge 2");
+                button3.setText("SELECTED");
+                button4.setText("Challenge 4");
+            }
+        });
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                button1.setText("Challenge 1");
+                button2.setText("Challenge 2");
+                button3.setText("Challenge 3");
+                button4.setText("SELECTED");
+            }
+        });
     }
 }
